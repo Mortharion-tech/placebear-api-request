@@ -2,10 +2,12 @@ const bear = document.getElementById("bear");
 console.log(bear);
 
 async function getData(params) {
-    let img;
+    let img1, img2, img3;
     try {
-        img = await fetch('https://placebear.com/200/300', { mode: 'no-cors' });
-        console.log(img);
+        img1 = await fetch('https://placebear.com/200/300', { mode: 'no-cors' });
+        img2 = await fetch('https://placebear.com/300/450', { mode: 'no-cors' });
+        img3 = await fetch('https://placebear.com/500/750', { mode: 'no-cors' });
+        console.log(img1);
     } catch(err) {
         console.log(err);
     }
