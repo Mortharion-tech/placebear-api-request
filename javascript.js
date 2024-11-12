@@ -1,3 +1,6 @@
+const bear = document.getElementById("bear");
+console.log(bear);
+
 async function getData(params) {
     let img;
     try {
@@ -8,4 +11,8 @@ async function getData(params) {
     }
 }
 
-getData();
+async function showData(params) {
+    await getData();
+}
+
+showData();
