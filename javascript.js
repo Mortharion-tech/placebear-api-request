@@ -1,5 +1,5 @@
-const bear = document.getElementById("bear");
-console.log(bear);
+const bear1 = document.getElementById("bear1");
+console.log(bear1);
 
 async function getData(params) {
     let img1, img2, img3;
@@ -15,6 +15,7 @@ async function getData(params) {
 
 async function showData(params) {
     await getData();
+    bear1.src='';
 }
 
 showData();
