@@ -2,10 +2,12 @@ const bear1 = document.getElementById("bear1");
 const bear2 = document.getElementById("bear2");
 const bear3 = document.getElementById("bear3");
 
+let proxyUrl = 'https://cors-anywhere-proxy.com/';
+
 async function getData(params) {
     let img1, img2, img3;
     try {
-        img1 = await fetch('https://placebear.com/200/300');
+        img1 = await fetch(proxyUrl + 'https://placebear.com/200/300');
         img2 = await fetch('https://placebear.com/300/450', { mode: 'no-cors' });
         img3 = await fetch('https://placebear.com/500/750', { mode: 'no-cors' });
         console.log(img1);
