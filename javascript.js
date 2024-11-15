@@ -2,7 +2,7 @@ const bear1 = document.getElementById("bear1");
 const bear2 = document.getElementById("bear2");
 const bear3 = document.getElementById("bear3");
 
-let proxyUrl = 'https://cors-anywhere-proxy.com/';
+let proxyUrl = 'https://cors-proxy.com/';
 
 async function getImage(url) {
     try {
