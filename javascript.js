@@ -2,22 +2,22 @@ const bear1 = document.getElementById("bear1");
 const bear2 = document.getElementById("bear2");
 const bear3 = document.getElementById("bear3");
 
-let proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+let proxyUrl = 'https://api.allorigins.win/raw?url=';
 
 async function getImage(url) {
     try {
-        let response = await fetch(proxyUrl + url);
+        let response = await fetch(proxyUrl + encodeURIComponent(url));
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        return url;
+        return proxyUrl + encodeURIComponent(url);
     } catch(err) {
         console.error(err);
         throw err;
     }
 }
 
-async function getData(params) {
+async function getData() {
     let img1, img2, img3;
     try {
         img1 = await getImage('https://placebear.com/200/300');
@@ -32,7 +32,7 @@ async function getData(params) {
     }
 }
 
-async function showData(params) {
+async function showData() {
     try {
         const { img1, img2, img3 } = await getData();
         bear1.src=img1.url;
