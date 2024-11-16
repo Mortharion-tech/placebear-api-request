@@ -35,9 +35,9 @@ async function getData() {
 async function showData() {
     try {
         const { img1, img2, img3 } = await getData();
-        bear1.src=img1.url;
-        bear2.src=img2.url;
-        bear3.src=img3.url;
+        bear1.src=img1;
+        bear2.src=img2;
+        bear3.src=img3;
     } catch(err) {
         console.log(err);
     }
