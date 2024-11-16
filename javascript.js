@@ -2,15 +2,15 @@ const bear1 = document.getElementById("bear1");
 const bear2 = document.getElementById("bear2");
 const bear3 = document.getElementById("bear3");
 
-let proxyUrl = 'https://cors-proxy.com/';
+let proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
 async function getImage(url) {
     try {
-        let response = await fetch(url);
+        let response = await fetch(proxyUrl + url);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        return response.url;
+        return url;
     } catch(err) {
         console.error(err);
         throw err;
@@ -25,6 +25,7 @@ async function getData(params) {
         img3 = await getImage('https://placebear.com/500/750');
         console.log(img1);
         console.log(img2);
+        console.log(img3);
         return { img1, img2, img3 };
     } catch(err) {
         console.log(err);
