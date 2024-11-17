@@ -6,7 +6,7 @@ let proxyUrl = 'https://api.allorigins.win/raw?url=';
 
 async function getImage(url) {
     try {
-        let response = await fetch(proxyUrl + encodeURIComponent(url));
+        const response = await fetch(proxyUrl + encodeURIComponent(url));
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
