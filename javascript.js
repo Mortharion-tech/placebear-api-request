@@ -12,7 +12,7 @@ async function getImage(url) {
         }
         return proxyUrl + encodeURIComponent(url);
     } catch(err) {
-        console.error('Failed to fetch image:', err);
+        console.error('Failed to fetch image: ', err);
         throw err;
     }
 }
@@ -28,7 +28,7 @@ async function getData() {
         console.log(img3);
         return { img1, img2, img3 };
     } catch(err) {
-        console.log(err);
+        console.log('Failed to get data: ', err);
     }
 }
 
