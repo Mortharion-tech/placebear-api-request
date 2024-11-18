@@ -39,7 +39,7 @@ async function showData() {
         bear2.src=img2;
         bear3.src=img3;
     } catch(err) {
-        console.log(err);
+        console.log('Failed to show data: ', err);
     }
     
 }
