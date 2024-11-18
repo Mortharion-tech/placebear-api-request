@@ -12,7 +12,7 @@ async function getImage(url) {
         }
         return proxyUrl + encodeURIComponent(url);
     } catch(err) {
-        console.error(err);
+        console.error('Failed to fetch image:', err);
         throw err;
     }
 }
