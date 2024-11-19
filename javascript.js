@@ -3,6 +3,11 @@ const bears = [
     document.getElementById("bear2"),
     document.getElementById("bear3")
 ];
+const bearUrls = [
+    'https://placebear.com/200/300',
+    'https://placebear.com/300/450',
+    'https://placebear.com/500/750'
+]
 /* const bear1 = document.getElementById("bear1");
 const bear2 = document.getElementById("bear2");
 const bear3 = document.getElementById("bear3"); */
@@ -23,13 +28,9 @@ async function getImage(url) {
 }
 
 async function getData() {
-    let img1, img2, img3;
+/*     let img1, img2, img3; */
     try {
-        const imgUrls = await Promise.all([
-            getImage('https://placebear.com/200/300'),
-            getImage('https://placebear.com/300/450'),
-            getImage('https://placebear.com/500/750')
-        ]);
+        const imgUrls = await Promise.all(bearUrls.map(url => getImage(url)));
         console.log(imgUrls);
 /*      img1 = await getImage('https://placebear.com/200/300');
         img2 = await getImage('https://placebear.com/300/450');
