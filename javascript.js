@@ -20,13 +20,19 @@ async function getImage(url) {
 async function getData() {
     let img1, img2, img3;
     try {
-        img1 = await getImage('https://placebear.com/200/300');
+        const imgUrls = await Promise.all([
+            getImage('https://placebear.com/200/300'),
+            getImage('https://placebear.com/300/450'),
+            getImage('https://placebear.com/500/750')
+        ]);
+        console.log(imgUrls);
+/*      img1 = await getImage('https://placebear.com/200/300');
         img2 = await getImage('https://placebear.com/300/450');
         img3 = await getImage('https://placebear.com/500/750');
         console.log(img1);
         console.log(img2);
-        console.log(img3);
-        return { img1, img2, img3 };
+        console.log(img3); */
+        return imgUrls;
     } catch(err) {
         console.log('Failed to get data: ', err);
     }
