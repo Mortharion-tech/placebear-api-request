@@ -3,6 +3,7 @@ const bears = [
     document.getElementById("bear2"),
     document.getElementById("bear3")
 ];
+const bearContainer = document.getElementById('bearContainer');
 const bearUrls = [
     'https://placebear.com/200/300',
     'https://placebear.com/300/450',
