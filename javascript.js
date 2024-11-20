@@ -8,7 +8,7 @@ const bearUrls = [
     'https://placebear.com/200/300',
     'https://placebear.com/300/450',
     'https://placebear.com/500/750'
-]
+];
 /* const bear1 = document.getElementById("bear1");
 const bear2 = document.getElementById("bear2");
 const bear3 = document.getElementById("bear3"); */
@@ -50,7 +50,10 @@ async function showData() {
         const imgUrls = await getData();
         imgUrls.forEach((url, index) => {
             bears[index].src = url;
-        })
+            const img = document.createElement('img');
+            img.src = url;
+            bearContainer.appendChild(img);
+        });
 /*         bear1.src=img1;
         bear2.src=img2;
         bear3.src=img3; */
