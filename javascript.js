@@ -1,17 +1,19 @@
-const bears = [
+/* const bears = [
     document.getElementById("bear1"),
     document.getElementById("bear2"),
     document.getElementById("bear3")
-];
-const bearContainer = document.getElementById('bearContainer');
+]; */
+/* const bear1 = document.getElementById("bear1");
+const bear2 = document.getElementById("bear2");
+const bear3 = document.getElementById("bear3"); */
+
 const bearUrls = [
     'https://placebear.com/200/300',
     'https://placebear.com/300/450',
     'https://placebear.com/500/750'
 ];
-/* const bear1 = document.getElementById("bear1");
-const bear2 = document.getElementById("bear2");
-const bear3 = document.getElementById("bear3"); */
+
+const bearContainer = document.getElementById('bearContainer');
 
 let proxyUrl = 'https://api.allorigins.win/raw?url=';
 
@@ -63,4 +65,8 @@ async function showData() {
     
 }
 
-showData();
+if (!bearContainer) {
+    console.error('Bear container element not found');
+} else {
+    showData();
+}
