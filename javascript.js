@@ -49,7 +49,7 @@ async function showData() {
     try {
         const imgUrls = await getData();
         imgUrls.forEach((url, index) => {
-            bears[index].src = url;
+        /*     bears[index].src = url; */
             const img = document.createElement('img');
             img.src = url;
             bearContainer.appendChild(img);
