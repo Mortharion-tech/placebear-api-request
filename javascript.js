@@ -1,12 +1,3 @@
-/* const bears = [
-    document.getElementById("bear1"),
-    document.getElementById("bear2"),
-    document.getElementById("bear3")
-]; */
-/* const bear1 = document.getElementById("bear1");
-const bear2 = document.getElementById("bear2");
-const bear3 = document.getElementById("bear3"); */
-
 const bearUrls = [
     'https://placebear.com/200/300',
     'https://placebear.com/300/450',
@@ -51,14 +42,10 @@ async function showData() {
     try {
         const imgUrls = await getData();
         imgUrls.forEach((url, index) => {
-        /*     bears[index].src = url; */
             const img = document.createElement('img');
             img.src = url;
             bearContainer.appendChild(img);
         });
-/*         bear1.src=img1;
-        bear2.src=img2;
-        bear3.src=img3; */
     } catch(err) {
         console.log('Failed to show data: ', err);
     }
