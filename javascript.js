@@ -28,6 +28,7 @@ async function getData() {
         return imgUrls;
     } catch(err) {
         console.log('Failed to get data: ', err);
+        bearContainer.classList.add('error');
     }
 }
 
