@@ -38,6 +38,7 @@ async function showData() {
         imgUrls.forEach((url, index) => {
             const img = document.createElement('img');
             img.src = url;
+            img.alt = `Bear image ${index + 1}`;
             bearContainer.appendChild(img);
         });
     } catch(err) {
