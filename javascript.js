@@ -42,6 +42,7 @@ async function showData() {
         });
     } catch(err) {
         console.log('Failed to show data: ', err);
+        bearContainer.classList.add('error');
     }
     
 }
