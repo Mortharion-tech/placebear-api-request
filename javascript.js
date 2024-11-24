@@ -29,6 +29,7 @@ async function getData() {
     } catch(err) {
         console.log('Failed to get data: ', err);
         bearContainer.classList.add('error');
+        return [];
     }
 }
 
