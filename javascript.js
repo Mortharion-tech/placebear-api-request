@@ -6,7 +6,7 @@ const bearUrls = [
 
 const bearContainer = document.getElementById('bearContainer');
 
-let proxyUrl = 'https://api.allorigins.win/raw?url=';
+const proxyUrl = 'https://api.allorigins.win/raw?url=';
 
 async function getImage(url) {
     try {
