@@ -6,8 +6,10 @@ const bearUrls = [
 
 const bearContainer = document.getElementById('bearContainer');
 
+//  Error not caught properly for incorrect Proxy URL
 const proxyUrl = 'https://api.allorigins.win/raw?url=';
 
+//  Loading time for the large image too long
 async function getImage(url) {
     try {
         const response = await fetch(proxyUrl + encodeURIComponent(url));
