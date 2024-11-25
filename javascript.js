@@ -16,7 +16,11 @@ async function getImage(url) {
         }
         return proxyUrl + encodeURIComponent(url);
     } catch(err) {
-        console.error('Failed to fetch image: ', err);
+        if (err.message.includes('Failed to fetch') || err.message.includes('CORS')) {
+            console.error('CORS error or network issue: ', err);
+        } else {
+            console.error('Failed to fetch image: ', err);
+        }
         throw err;
     }
 }
